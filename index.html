@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <div class="calculator">
+          <h6>Bill</h6>
+          <input type="text" id="input-bill" class="mt-10 w-100" />
+          <h6 class="mt-30">Select Tip %</h6>
+          <div class="percentage mt-10">
+            <button id="percentage-5" onclick="mostrar(5)">5%</button>
+            <button id="percentage-10" onclick="mostrar(10)" >10%</button>
+            <button id="percentage-15" onclick="mostrar(15)">15%</button>
+            <button id="percentage-25" onclick="mostrar(25)">25%</button>
+            <button id="percentage-50" onclick="mostrar(50)">50%</button>
+            <input
+              type="text"
+              class="custom"
+              onkeyup="mostrar(this.value)"
+              placeholder="Custom"
+            />
+          </div>
+          <h6 class="mt-30">Number of people</h6>
+          <input
+            type="text"
+            id="number-people"
+            placeholder="10"
+            class="mt-10 w-100"
+          />
+        </div>
+        <div class="result">
+          <div class="amount">
+            <div>
+              <h6>Tip amount</h6>
+              <span>/ person</span>
+            </div>
+            <div>
+              <span class="tip result-number">S/ 0.00</span>
+            </div>
+          </div>
+          <div class="amount mt-30">
+            <div>
+              <h6>Total</h6>
+              <span>/ person</span>
+            </div>
+            <div>
+              <span class="total result-number">S/ 0.00</span>
+            </div>
+          </div>
+          <button class="reset">Reset</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
